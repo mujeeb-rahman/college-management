@@ -6,7 +6,7 @@
         function Login($uname,$pword)
         {
             include 'config/connection.php';
-            $sql = "SELECT * FROM faculty WHERE femail = '".$uname."' and fpassword = '".$pword."' ";
+            $sql = "SELECT * FROM faculty WHERE femail = '".$uname."' and fpassword = '".$pword."'  and fstatus = 'approved'";
             $result = mysqli_query($conn,$sql);
             if(mysqli_num_rows($result)>0)
             {
